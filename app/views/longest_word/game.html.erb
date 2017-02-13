@@ -1,0 +1,13 @@
+<h2>******** Welcome to the longest word-game !********</h2>
+<p>
+  Here is your grid : <br>
+  <%= @grid.join(" ") %>
+</p>
+*****************************************************
+<p><br></p>
+<form action="/score">
+  <input type="text" placeholder="What's your best shot ?" name="attempt">
+  <%= hidden_field_tag :grid, @grid %>
+  <%= hidden_field_tag :start_time, @start_time %>
+  <input type="submit" value="Get your result">
+</form>
